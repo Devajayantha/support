@@ -22,31 +22,31 @@ class Terbilang
                     return ' ' . $angka[$number];
 
                 case $number < 20:
-                    return terbilang($number - 10) . ' belas';
+                    return self::jumlah($number - 10) . ' belas';
 
                 case $number < 100:
-                    return terbilang($number / 10) . ' puluh ' . terbilang($number % 10);
+                    return self::jumlah($number / 10) . ' puluh ' . self::jumlah($number % 10);
 
                 case $number < 200:
-                    return 'seratus ' . terbilang($number - 100);
+                    return 'seratus ' . self::jumlah($number - 100);
 
                 case $number < 1000:
-                    return terbilang($number / 100) . ' ratus ' . terbilang($number % 100);
+                    return self::jumlah($number / 100) . ' ratus ' . self::jumlah($number % 100);
 
                 case $number < 2000:
-                    return 'seribu ' . terbilang($number - 1000);
+                    return 'seribu ' . self::jumlah($number - 1000);
 
                 case $number < 1000000:
-                    return terbilang($number / 1000) . ' ribu ' . terbilang($number % 1000);
+                    return self::jumlah($number / 1000) . ' ribu ' . self::jumlah($number % 1000);
 
                 case $number < 1000000000:
-                    return terbilang($number / 1000000) . ' juta ' . terbilang($number % 1000000);
+                    return self::jumlah($number / 1000000) . ' juta ' . self::jumlah($number % 1000000);
 
                 case $number < 1000000000000:
-                    return terbilang($number / 1000000000) . ' milyar ' . terbilang($number % 1000000000);
+                    return self::jumlah($number / 1000000000) . ' milyar ' . self::jumlah($number % 1000000000);
 
                 case $number < 1000000000000000:
-                    return terbilang($number / 1000000000000) . ' trilyun ' . terbilang($number % 1000000000000);
+                    return self::jumlah($number / 1000000000000) . ' trilyun ' . self::jumlah($number % 1000000000000);
             }
         });
 
