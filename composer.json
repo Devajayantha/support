@@ -1,0 +1,18 @@
+{
+    "name": "devajayantha/support",
+    "description": "small package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DevaJayantha",
+            "email": "devajayantha870@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devajayantha\\Support\\": "src/"
+        }
+    }
+}
